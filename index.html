@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="gameContainer">
+      <canvas id="gameCanvas" width="300" height="300"></canvas>
+
+      <div id="controls">
+        <button id="up">↑</button>
+        <div>
+          <button id="left">←</button>
+          <button id="down">↓</button>
+          <button id="right">→</button>
+        </div>
+      </div>
+
+      <button id="startBtn">Start Game</button>
+
+      <div id="gameOverScreen" class="hidden">
+        <h2>You lose Nigga</h2>
+        <img
+          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHo2Z2hueTBsemRkaG1xYjNiMWhuY3gxdmx6NnBnYWpoN2UwcDByZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YaZgr3Nj9DDI4/giphy.gif"
+          alt="Game Over GIF"
+        />
+        <button onclick="location.reload()">Play Again</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

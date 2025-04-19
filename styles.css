@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #dbeafe, #fbcfe8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#gameContainer {
+  text-align: center;
+  max-width: 360px;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+  border: 3px solid #94a3b8;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#controls {
+  display: none;
+  margin: 10px 0;
+}
+
+#controls button {
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 5px;
+  background: #a5b4fc;
+  border: none;
+  border-radius: 8px;
+  color: #1e3a8a;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.1s ease;
+}
+
+#controls button:active {
+  transform: scale(0.95);
+}
+
+#startBtn {
+  font-size: 20px;
+  padding: 10px 30px;
+  background: #34d399;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#startBtn:active {
+  transform: scale(0.95);
+}
+
+#gameOverScreen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid #e5e7eb;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 10;
+}
+
+#gameOverScreen.hidden {
+  display: none;
+}
+
+#gameOverScreen img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+#gameOverScreen h2 {
+  color: #ef4444;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#gameOverScreen button {
+  padding: 8px 20px;
+  font-size: 16px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
